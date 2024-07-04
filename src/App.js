@@ -6,6 +6,12 @@ import UseStateHookArray from './components/UseStateHookArray';
 import UseEffectCounter1 from './components/UseEffectCounter1';
 import IntervalHookCounter from './components/IntervalHookCounter';
 import DataFetching from './components/DataFetching';
+import ComponentC from './components/useContext/ComponentC';
+import ComponentA from './components/useContext/ComponentA';
+import React from 'react';
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 function App() {
   return (
@@ -16,7 +22,13 @@ function App() {
       {/* <UseStateHookArray /> */}
       {/* <UseEffectCounter1 /> */}
       {/* <IntervalHookCounter /> */}
-      <DataFetching />
+      {/* <DataFetching /> */}
+      <UserContext.Provider value={"Dinesh"}>
+        <ChannelContext.Provider value={"Dinesh Channel"}>
+          {/* <ComponentC /> */}
+          <ComponentA />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
