@@ -9,6 +9,7 @@ import DataFetching from './components/DataFetching';
 import ComponentC from './components/useContext/ComponentC';
 import ComponentA from './components/useContext/ComponentA';
 import Counter1 from './components/useReducer/Counter1';
+import Counter2 from './components/useReducer/Counter2';
 import React from 'react';
 
 export const UserContext = React.createContext()
@@ -29,7 +30,8 @@ function App() {
           <ComponentA />
         </ChannelContext.Provider>
       </UserContext.Provider> */}
-      <Counter1 />
+      {/* <Counter1 /> */}
+      <Counter2 />
     </div>
   );
 }
