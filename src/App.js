@@ -14,6 +14,7 @@ import Component1 from './components/GlobalStateManagement/Component1';
 import Component2 from './components/GlobalStateManagement/Component2';
 import Component3 from './components/GlobalStateManagement/Component3';
 import DataFetching1 from './components/DataFetching1';
+import DataFetching2 from './components/useReducer/DataFetching2';
 import React, {useReducer} from 'react';
 
 export const UserContext = React.createContext()
@@ -62,7 +63,8 @@ function App() {
     // </div>
     // </CountContext.Provider>
     <div className="App">
-      <DataFetching1/> 
+      {/* <DataFetching1/>  */}
+      <DataFetching2/>
     </div>
   );
 }
