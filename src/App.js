@@ -13,6 +13,7 @@ import Counter2 from './components/useReducer/Counter2';
 import Component1 from './components/GlobalStateManagement/Component1';
 import Component2 from './components/GlobalStateManagement/Component2';
 import Component3 from './components/GlobalStateManagement/Component3';
+import DataFetching1 from './components/DataFetching1';
 import React, {useReducer} from 'react';
 
 export const UserContext = React.createContext()
@@ -38,28 +39,31 @@ const reducer = (state,action) => {
 function App() {
   const [count, dispatch] = useReducer(reducer,initialState)   //count & initialState both are same.
   return (
-    <CountContext.Provider value={{ContextCount: count, ContextDispatch: dispatch}}>
-      <div className="App">
-        {count}
-        <Component1/>
-        <Component2/>
-        <Component3/>  
-      {/* <ClsCounter /> */}
-      {/* <Hooks /> */}
-      {/* <UseStateHookForm /> */}
-      {/* <UseStateHookArray /> */}
-      {/* <UseEffectCounter1 /> */}
-      {/* <IntervalHookCounter /> */}
-      {/* <DataFetching /> */}
-      {/* <UserContext.Provider value={"Dinesh"}>
-        <ChannelContext.Provider value={"Dinesh Channel"}>
-          <ComponentA />
-        </ChannelContext.Provider>
-      </UserContext.Provider> */}
-      {/* <Counter1 /> */}
-      {/* <Counter2 /> */}
+    // <CountContext.Provider value={{ContextCount: count, ContextDispatch: dispatch}}>
+    //   <div className="App">
+    //     {count}
+    //     <Component1/>
+    //     <Component2/>
+    //     <Component3/>  
+    //   {/* <ClsCounter /> */}
+    //   {/* <Hooks /> */}
+    //   {/* <UseStateHookForm /> */}
+    //   {/* <UseStateHookArray /> */}
+    //   {/* <UseEffectCounter1 /> */}
+    //   {/* <IntervalHookCounter /> */}
+    //   {/* <DataFetching /> */}
+    //   {/* <UserContext.Provider value={"Dinesh"}>
+    //     <ChannelContext.Provider value={"Dinesh Channel"}>
+    //       <ComponentA />
+    //     </ChannelContext.Provider>
+    //   </UserContext.Provider> */}
+    //   {/* <Counter1 /> */}
+    //   {/* <Counter2 /> */}
+    // </div>
+    // </CountContext.Provider>
+    <div className="App">
+      <DataFetching1/> 
     </div>
-    </CountContext.Provider>
   );
 }
 
